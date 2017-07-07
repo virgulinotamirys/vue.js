@@ -1,18 +1,18 @@
 <template>
     <div class="painel">
-    <h2 class="painel-titulo"></h2>
-        <div class="painel-corpo">
-        </div>
+    <h2 class="painel-titulo">{{ titulo }}</h2>
+        <slot class="painel-conteudo">
+        </slot>
     </div>
 </template>
 
 <script>
 export default {
-  
+  props: ['titulo']
 }
 </script>
 
-<style>
+<style scoped>
   /* estilo do painel */ 
 
    .painel {
@@ -36,5 +36,7 @@ export default {
     text-transform: uppercase;
   }
   
-
+   *  {
+    box-shadow: 5px 5px 5px;
+    }
 </style>
